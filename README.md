@@ -1,27 +1,31 @@
 # CentralCinema
 A demo application about a fictional cinema.
 
-In source you'll find:
+- Demo of widgets:
 
--TextView
+> - TextView
 
--ImageView
+> - ImageView
 
--RelativeView
+> - RelativeView
 
--LayoutView
+> - LayoutView
 
--ScrollView
+> - ScrollView
 
--ViewFlipper
+> - ViewFlipper
 
+- Demo of files:
 
--styles.xml
+> - styles.xml
 
--dimens.xml
+> - dimens.xml
 
--strings.xml
+> - strings.xml
 
+- Minimal Java code (used to change content, hide/show widgets)
+
+# Images:
 Gif:
 
 https://giphy.com/gifs/l0Ex74hkI0muEKX5e
