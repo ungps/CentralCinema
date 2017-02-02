@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Central Cinema</string>
+    <string name="info">Central Cinema showcase a wide variety of films, ranging from independent and foreign film to 3-D movies and smart films from Hollywood.</string>
+    <string name="phone_number1">"(+40) 0712 345 678"</string>
+    <string name="phone_number2">"(+40) 0787 654 321"</string>
+    <string name="location">Domneasca St., 102, Galati, Romania</string>
+    <string name="email">central@cine.ma</string>
+    <string name="movie1">Captain America: Civil War (2016)</string>
+    <string name="movie2">Rogue One: A Star Wars Story (2016)</string>
+    <string name="movie3">Deadpool (2016)</string>
+    <string name="movie4">Zootopia (2016)</string>
+    <string name="movie5">La La Land (2016)</string>
+    <string name="movie6">Doctor Strange (2016)</string>
+    <string name="movie7">Suicide Squad (2016)</string>
+    <string name="movie8">Batman v Superman (2016)</string>
+    <string name="movie9">GhostBusters (2016)</string>
+    <string name="movie10">StarTrek Beyond (2016)</string>
+    <string name="day135">Sunday, Tuesday, Thursday</string>
+    <string name="day2467">Monday, Wednesday, Friday, Saturday</string>
+    <string name="ord1">09:00 – 12:00</string>
+    <string name="ord2">12:00 – 15:00</string>
+    <string name="ord3">15:00 – 18:00</string>
+    <string name="ord4">18:00 – 21:00</string>
+    <string name="ord5">21:00 – 00:00</string>
+</resources>

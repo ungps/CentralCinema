@@ -1,0 +1,17 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="infoTextSize">22sp</dimen>
+    <dimen name="infoTextLPadding">24dp</dimen>
+    <dimen name="categoryTextSize">26sp</dimen>
+    <dimen name="categoryTextLPadding">96dp</dimen>
+    <dimen name="categoryTextTBPadding">4dp</dimen>
+    <dimen name="menuButtonPadding">8dp</dimen>
+    <dimen name="introTextSize">22sp</dimen>
+    <dimen name="introTextLRPadding">24dp</dimen>
+    <dimen name="introTextTBPadding">8dp</dimen>
+    <dimen name="scheduleTextSize">26sp</dimen>
+    <dimen name="scheduleTextLPadding">96dp</dimen>
+    <dimen name="scheduleTextTBPadding">16dp</dimen>
+</resources>

@@ -1,0 +1,56 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MenuButton">
+        <item name="android:background">#00000000</item>
+        <!--<item name="android:alpha">0.25</item>-->
+        <item name="android:padding">@dimen/menuButtonPadding</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="InfoText">
+        <item name="android:paddingLeft">@dimen/infoTextLPadding</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/infoTextSize</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+    <style name="InfoCategory">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">@dimen/categoryTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/categoryTextLPadding</item>
+        <item name="android:paddingTop">@dimen/categoryTextTBPadding</item>
+        <item name="android:paddingBottom">@dimen/categoryTextTBPadding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="ScheduleCategory">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">@dimen/categoryTextSize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">@dimen/scheduleTextLPadding</item>
+        <item name="android:paddingTop">@dimen/scheduleTextTBPadding</item>
+        <item name="android:paddingBottom">@dimen/scheduleTextTBPadding</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="IntroText">
+        <item name="android:paddingLeft">@dimen/introTextLRPadding</item>
+        <item name="android:paddingRight">@dimen/introTextLRPadding</item>
+        <item name="android:paddingTop">@dimen/introTextTBPadding</item>
+        <item name="android:paddingBottom">@dimen/introTextTBPadding</item>
+        <item name="android:textSize">@dimen/introTextSize</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>
