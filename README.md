@@ -4,14 +4,22 @@ A demo application about a fictional cinema.
 In source you'll find:
 
 -TextView
+
 -ImageView
+
 -RelativeView
+
 -LayoutView
+
 -ScrollView
+
 -ViewFlipper
 
+
 -styles.xml
+
 -dimens.xml
+
 -strings.xml
 
 Gif:
