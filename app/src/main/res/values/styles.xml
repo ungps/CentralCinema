@@ -15,6 +15,17 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">1</item>
     </style>
+
+    <style name="IntroText">
+        <item name="android:paddingLeft">@dimen/introTextLRPadding</item>
+        <item name="android:paddingRight">@dimen/introTextLRPadding</item>
+        <item name="android:paddingTop">@dimen/introTextTBPadding</item>
+        <item name="android:paddingBottom">@dimen/introTextTBPadding</item>
+        <item name="android:textSize">@dimen/introTextSize</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
     <style name="InfoText">
         <item name="android:paddingLeft">@dimen/infoTextLPadding</item>
         <item name="android:gravity">center_vertical</item>
@@ -22,6 +33,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textStyle">italic</item>
+        <item name="android:drawablePadding">16dp</item>
     </style>
     <style name="InfoCategory">
         <item name="android:textColor">#000000</item>
@@ -31,6 +43,11 @@
         <item name="android:paddingTop">@dimen/categoryTextTBPadding</item>
         <item name="android:paddingBottom">@dimen/categoryTextTBPadding</item>
         <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ScheduleRow">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
     <style name="ScheduleCategory">
@@ -43,14 +60,37 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    <style name="IntroText">
-        <item name="android:paddingLeft">@dimen/introTextLRPadding</item>
-        <item name="android:paddingRight">@dimen/introTextLRPadding</item>
-        <item name="android:paddingTop">@dimen/introTextTBPadding</item>
-        <item name="android:paddingBottom">@dimen/introTextTBPadding</item>
-        <item name="android:textSize">@dimen/introTextSize</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:layout_width">match_parent</item>
+
+    <style name="ScheduleText">
+        <item name="android:paddingLeft">@dimen/infoTextLPadding</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/infoTextSize</item>
+        <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:drawablePadding">16dp</item>
+    </style>
+
+    <style name="BannerViewFlipper">
+        <item name="android:flipInterval">2000</item>
+        <item name="android:autoStart">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="OverBannerLogo">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:src">@drawable/logo</item>
+        <item name="android:layout_centerHorizontal">true</item>
+
+    </style>
+
+    <style name="Container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/colorGrey</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">0.525</item>
     </style>
 </resources>

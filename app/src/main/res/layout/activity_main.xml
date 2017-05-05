@@ -13,69 +13,53 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.35">
-            <ViewFlipper
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autoStart="true"
-                android:flipInterval="2000">
+            <ViewFlipper style="@style/BannerViewFlipper">
                 <ImageView
-                    android:src="@drawable/cover"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover" />
                 <ImageView
-                    android:src="@drawable/cover1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover1" />
                 <ImageView
-                    android:src="@drawable/cover2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"/>
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover2" />
                 <ImageView
-                    android:src="@drawable/cover3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"/>
-
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cover3" />
             </ViewFlipper>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/logo"
-                android:layout_centerHorizontal="true" />
+            <ImageView style="@style/OverBannerLogo" />
         </RelativeLayout>
         <LinearLayout
-            android:background="#11000000"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.075">
+            android:layout_weight="0.075"
+            android:background="@color/colorDarkGrey">
             <ImageButton
                 android:id="@+id/infoButton"
-                android:background="#70FFFFFF"
-                android:tag="1"
                 style="@style/MenuButton"
+                android:background="@color/colorGrey"
+                android:onClick="changeContent"
                 android:src="@drawable/info"
-                android:onClick="changeContent"/>
+                android:tag="1" />
             <ImageButton
                 android:id="@+id/scheduleButton"
-                android:tag="2"
                 style="@style/MenuButton"
+                android:onClick="changeContent"
                 android:src="@drawable/alarm"
-                android:onClick="changeContent"/>
-            <!--<ImageButton
-                style="@style/MenuButton"
-                android:src="@drawable/location"/>-->
+                android:tag="2" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/infoContent"
-            android:layout_width="match_parent"
-            android:background="#10000000"
-            android:orientation="vertical"
-            android:layout_height="0dp"
-            android:layout_weight="0.525">
+            style="@style/Container">
             <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -85,44 +69,40 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <TextView
-                        android:text="@string/info"
-                        style="@style/IntroText"/>
+                        style="@style/IntroText"
+                        android:text="@string/info" />
                     <TextView
                         style="@style/InfoCategory"
-                        android:text="Location"/>
+                        android:text="@string/loc_category" />
                     <TextView
                         style="@style/InfoText"
-                        android:text="@string/location"
                         android:drawableLeft="@drawable/locm"
-                        android:drawablePadding="16dp"                        />
+                        android:drawableStart="@drawable/locm"
+                        android:text="@string/location" />
                     <TextView
                         style="@style/InfoCategory"
-                        android:text="Contact"/>
+                        android:text="@string/contact_category" />
                     <TextView
                         style="@style/InfoText"
-                        android:text="@string/phone_number1"
                         android:drawableLeft="@drawable/callm"
-                        android:drawablePadding="16dp"/>
+                        android:drawableStart="@drawable/callm"
+                        android:text="@string/phone_number1" />
                     <TextView
                         style="@style/InfoText"
-                        android:text="@string/phone_number2"
                         android:drawableLeft="@drawable/callm"
-                        android:drawablePadding="16dp"/>
+                        android:drawablePadding="16dp"
+                        android:text="@string/phone_number2" />
                     <TextView
                         style="@style/InfoText"
-                        android:text="@string/email"
                         android:drawableLeft="@drawable/mail"
-                        android:drawablePadding="16dp"/>
+                        android:drawableStart="@drawable/mail"
+                        android:text="@string/email" />
                 </LinearLayout>
             </ScrollView>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/scheduleContent"
-            android:background="#10000000"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.525"
-            android:orientation="vertical"
+            style="@style/Container"
             android:visibility="gone">
             <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
@@ -133,120 +113,90 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
                     <TextView
-                        android:text="@string/day135"
-                        style="@style/ScheduleCategory" />
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        style="@style/ScheduleCategory"
+                        android:text="@string/day135" />
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord1"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord1" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie1"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie1" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord2"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord2" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie2"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie2" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord3"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord3" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie3"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie3" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord4"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord4" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie4"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie4" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord5"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord5" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie5"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie5" />
                     </LinearLayout>
                     <TextView
-                        android:text="@string/day2467"
-                        style="@style/ScheduleCategory"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        style="@style/ScheduleCategory"
+                        android:text="@string/day2467" />
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord1"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord1" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie6"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie6" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord2"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord2" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie7"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie7" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord3"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord3" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie8"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie8" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord4"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord4" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie9"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie9" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <LinearLayout style="@style/ScheduleRow">
                         <TextView
-                            android:text="@string/ord5"
+                            style="@style/ScheduleText"
+                            android:text="@string/ord5" />
+                        <TextView
                             style="@style/InfoText"
-                            android:layout_width="wrap_content"/>
-                        <TextView
-                            android:text="@string/movie10"
-                            style="@style/InfoText"/>
+                            android:text="@string/movie10" />
                     </LinearLayout>
                 </LinearLayout>
             </ScrollView>

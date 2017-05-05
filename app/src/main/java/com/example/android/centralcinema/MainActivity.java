@@ -1,38 +1,42 @@
 package com.example.android.centralcinema;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
+    private int grey, darkGrey;
+    private LinearLayout scheduleContent, infoContent;
+    private ImageButton scheduleButton, infoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        grey = ContextCompat.getColor(this, R.color.colorGrey);
+        darkGrey = ContextCompat.getColor(this, R.color.colorDarkGrey);
+        scheduleContent = (LinearLayout) findViewById(R.id.scheduleContent);
+        infoContent = (LinearLayout) findViewById(R.id.infoContent);
+        scheduleButton = (ImageButton) findViewById(R.id.scheduleButton);
+        infoButton = (ImageButton) findViewById(R.id.infoButton);
+    }
+
+    private void changeLayout(LinearLayout oldContent, LinearLayout newContent, ImageButton otherBtn) {
+        oldContent.setVisibility(View.GONE);
+        newContent.setVisibility(View.VISIBLE);
+        otherBtn.setBackgroundColor(darkGrey);
     }
 
     public void changeContent(View btn) {
         int i = Integer.parseInt(btn.getTag().toString());
-        //70FFFFFF when selected
-        //00000000 when not selected
-        btn.setBackgroundColor(0x70FFFFFF);
-        if(i==1) {
-            LinearLayout one = (LinearLayout) findViewById(R.id.scheduleContent);
-            one.setVisibility(View.GONE);
-            one = (LinearLayout) findViewById(R.id.infoContent);
-            one.setVisibility(View.VISIBLE);
-            ImageButton otherBtn = (ImageButton) findViewById(R.id.scheduleButton);
-            otherBtn.setBackgroundColor(0x00000000);
+        btn.setBackgroundColor(grey);
+        if (i == 1) {
+            changeLayout(scheduleContent, infoContent, scheduleButton);
         } else {
-            LinearLayout one = (LinearLayout) findViewById(R.id.infoContent);
-            one.setVisibility(View.GONE);
-            one = (LinearLayout) findViewById(R.id.scheduleContent);
-            one.setVisibility(View.VISIBLE);
-            ImageButton otherBtn = (ImageButton) findViewById(R.id.infoButton);
-            otherBtn.setBackgroundColor(0x00000000);
+            changeLayout(infoContent, scheduleContent, infoButton);
         }
     }
 }
